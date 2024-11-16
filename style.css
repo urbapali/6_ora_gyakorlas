@@ -46,9 +46,11 @@ h1{
 }
 
 .content .content-grid{
+    margin: auto;
+    position: relative;
     display: grid;
     grid-template-areas: "szemelyek kocsik";
-    grid-template-columns: 800px 300px;
+    grid-template-columns: 2fr 1fr;
     align-items: center;
     justify-content: center;
     gap: 10px
@@ -63,6 +65,7 @@ h1{
 }
 
 .kocsik{
+    margin: auto;
     grid-area: kocsik
 }
 
@@ -84,23 +87,29 @@ h1{
 
 }
 
-.szemely img{
-    width: 350px;
-    margin: 20px 20px;
+.szemely-body{
+    padding: 10px;
+}
+
+.szemely-body img{
+    width: 97%;
     object-fit: cover;
-    padding: 6px;
+    margin: auto;
+    padding: 10px;
     border-radius: 10px;
     border: 2px solid var(--border);
 }
 
-.szemely .leiras{
+.szemely-body .leiras{
     padding: 15px 20px;
 }
 
 .kocsik{
-    display:inline;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
     margin: auto;
-
 }
 
 .kocsik img{
@@ -118,9 +127,59 @@ footer{
     padding: 10px
 }
 
+
+table{
+    position: absolute;
+    grid-area: szemelyek;
+    display: table;
+    top: 10px;
+    width: 100%;
+    margin: auto;
+    padding: 25px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th{
+    border-bottom: 2px solid black;
+    font-weight: bolder;
+    padding: 3px;
+}
+td{
+    background-color: var(--border);
+    line-height: 35px;
+    padding: 3px;
+}
+tr:nth-child(even){
+    background: #8a1313;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .content-grid{
+        grid-template-columns: 1fr !important;
+        margin:auto;
+        grid-template-areas: 
+        'szemelyek' 
+        'kocsik' !important;
+        grid-template-rows: 1fr 1fr;
+    }
+    .kocsik{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .szemelyek{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    
+}
+
 @media screen and (max-width: 800px) {
     .content-grid{
-        grid-template-columns: 98% !important;
+        grid-template-columns: 1fr !important;
         margin:auto;
         grid-template-areas: 
         'szemelyek' 
