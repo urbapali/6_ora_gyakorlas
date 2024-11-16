@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -5,16 +7,68 @@
 }
 
 :root{
-    --primary: rgb(0,135,104)
+    --primary: rgb(0,135,104);
+    --secondary: rgb(247,247,244);
+    --border: rgb(223,223,221)
 }
 
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    padding: 10px;
+}
+
+
 h1{
+    padding: 10px;
     color: var(--primary)
 }
 
 .menu{
     width: 100%;
     background: var(--primary);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 18px;
+}
+.menu a {
+    margin-inline-start: 20px;
+    text-decoration: none;
+    color: white
 }
 
+.content{
+    padding: 10px;
+    display: block;
+}
+
+.content .szemely{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 400px;
+   
+    border: 2px solid var(--border);
+    border-radius: 10px;
+}
+
+.szemely .cim{
+    background-color: var(--secondary);
+    color: var(--primary);
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.szemely img{
+    width: 95%;
+    margin: auto;
+    padding: 4px;
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    object-fit: contain;
+}
 
