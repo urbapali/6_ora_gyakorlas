@@ -61,14 +61,19 @@ h1{
     width: 100%;
     padding: 10px;
     border-bottom: 1px solid var(--border);
+
 }
 
 .szemely img{
     width: 95%;
     margin: auto;
-    padding: 4px;
+    padding: 6px;
+    margin: 10px;
     border-radius: 10px;
     border: 2px solid var(--border);
     object-fit: contain;
 }
 
+.szemely .leiras{
+    padding: 15px 20px;
+}
