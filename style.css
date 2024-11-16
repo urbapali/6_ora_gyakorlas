@@ -47,12 +47,12 @@ h1{
 
 .content .content-grid{
     margin: auto;
-    position: relative;
     display: grid;
     grid-template-areas: "szemelyek kocsik";
     grid-template-columns: 2fr 1fr;
     align-items: center;
     justify-content: center;
+
     gap: 10px
 }
 
@@ -129,16 +129,19 @@ footer{
 
 
 table{
-    position: absolute;
     grid-area: szemelyek;
     display: table;
-    top: 10px;
     width: 100%;
     margin: auto;
-    padding: 25px;
+    padding: 35px;
     text-align: left;
     border-collapse: collapse;
 }
+
+thead tr th{
+    background-color: white !important;
+}
+
 
 th{
     border-bottom: 2px solid black;
@@ -146,12 +149,14 @@ th{
     padding: 3px;
 }
 td{
-    background-color: var(--border);
     line-height: 35px;
-    padding: 3px;
+    padding: 10px;
 }
 tr:nth-child(even){
-    background: #8a1313;
+    background: #ffffff !important;
+}
+tr:nth-child(odd){
+    background: #b9b9b944 !important;
 }
 
 
