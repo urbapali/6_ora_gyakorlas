@@ -45,35 +45,93 @@ h1{
     display: block;
 }
 
+.content .content-grid{
+    display: grid;
+    grid-template-areas: "szemelyek kocsik";
+    grid-template-columns: 800px 300px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+}
+
+.szemelyek{
+    grid-area: szemelyek;
+    gap: 10px;
+    display: grid;
+    margin:auto;
+    grid-template-columns: 1fr 1fr;
+}
+
+.kocsik{
+    grid-area: kocsik
+}
+
 .content .szemely{
     display: flex;
-    justify-content: center;
     flex-direction: column;
     max-width: 400px;
-   
     border: 2px solid var(--border);
     border-radius: 10px;
 }
 
 .szemely .cim{
+    display: inline;
+    width: 100%;
+    padding:20px;
     background-color: var(--secondary);
     color: var(--primary);
-    width: 100%;
-    padding: 10px;
     border-bottom: 1px solid var(--border);
 
 }
 
 .szemely img{
-    width: 95%;
-    margin: auto;
+    width: 350px;
+    margin: 20px 20px;
+    object-fit: cover;
     padding: 6px;
-    margin: 10px;
     border-radius: 10px;
     border: 2px solid var(--border);
-    object-fit: contain;
 }
 
 .szemely .leiras{
     padding: 15px 20px;
+}
+
+.kocsik{
+    display:inline;
+    margin: auto;
+
+}
+
+.kocsik img{
+    display: block;
+    max-width: 300px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border)
+}
+
+footer{
+    color: var(--primary);
+    text-align: center;
+    padding: 10px
+}
+
+@media screen and (max-width: 800px) {
+    .content-grid{
+        grid-template-columns: 98% !important;
+        margin:auto;
+        grid-template-areas: 
+        'szemelyek' 
+        'kocsik' !important;
+        grid-template-rows: auto auto;
+
+    }
+
+    .szemelyek{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
 }
