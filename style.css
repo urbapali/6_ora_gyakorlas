@@ -1,201 +1,196 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin:0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-:root{
-    --primary: rgb(0,135,104);
-    --secondary: rgb(247,247,244);
-    --border: rgb(223,223,221)
+:root {
+  --primary: rgb(0, 135, 104);
+  --secondary: rgb(247, 247, 244);
+  --border: rgb(223, 223, 221);
 }
 
-body{
-    font-family: "Poppins", sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-.container{
-    padding: 10px;
+.container {
+  padding: 10px;
 }
 
-
-h1{
-    padding: 10px;
-    color: var(--primary)
+h1 {
+  padding: 10px;
+  color: var(--primary);
 }
 
-.menu{
-    width: 100%;
-    background: var(--primary);
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    padding: 18px;
+.menu {
+  width: 100%;
+  background: var(--primary);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 18px;
 }
 .menu a {
-    margin-inline-start: 20px;
-    text-decoration: none;
-    color: white
+  margin-inline-start: 20px;
+  text-decoration: none;
+  color: white;
 }
 
-.content{
-    padding: 10px;
-    display: block;
+.content {
+  padding: 10px;
+  display: block;
 }
 
-.content .content-grid{
-    margin: auto;
-    display: grid;
-    grid-template-areas: "szemelyek kocsik";
-    grid-template-columns: 2fr 1fr;
-    align-items: center;
-    justify-content: center;
+.content .content-grid {
+  margin: auto;
+  display: grid;
+  grid-template-areas: "szemelyek kocsik";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
 
-    gap: 10px
+  gap: 10px;
 }
 
-.szemelyek{
-    grid-area: szemelyek;
-    gap: 10px;
-    display: grid;
-    margin:auto;
-    grid-template-columns: 1fr 1fr;
+.szemelyek {
+  grid-area: szemelyek;
+  gap: 10px;
+  display: grid;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
 }
 
-.kocsik{
-    margin: auto;
-    grid-area: kocsik
+.kocsik {
+  margin: auto;
+  grid-area: kocsik;
 }
 
-.content .szemely{
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    border: 2px solid var(--border);
-    border-radius: 10px;
+.content .szemely {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
 }
 
-.szemely .cim{
-    display: inline;
-    width: 100%;
-    padding:20px;
-    background-color: var(--secondary);
-    color: var(--primary);
-    border-bottom: 1px solid var(--border);
-
+.szemely .cim {
+  display: inline;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-bottom: 1px solid var(--border);
 }
 
-.szemely-body{
-    padding: 10px;
+.szemely-body {
+  padding: 10px;
 }
 
-.szemely-body img{
-    width: 97%;
-    object-fit: cover;
-    margin: auto;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid var(--border);
+.szemely-body img {
+  width: 97%;
+  object-fit: cover;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--border);
 }
 
-.szemely-body .leiras{
-    padding: 15px 20px;
+.szemely-body .leiras {
+  padding: 15px 20px;
 }
 
-.kocsik{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    margin: auto;
+.kocsik {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  margin: auto;
 }
 
-.kocsik img{
-    display: block;
-    max-width: 300px;
-    padding: 5px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid var(--border)
+.kocsik img {
+  display: block;
+  max-width: 300px;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
 }
 
-footer{
-    color: var(--primary);
-    text-align: center;
-    padding: 10px
+footer {
+  color: var(--primary);
+  text-align: center;
+  padding: 10px;
 }
 
-
-table{
-    grid-area: szemelyek;
-    display: table;
-    width: 100%;
-    margin: auto;
-    padding: 35px;
-    text-align: left;
-    border-collapse: collapse;
+.felsorolas {
+  padding: 20px 50px;
+  margin: auto;
+  margin-top: 0;
 }
 
-thead tr th{
-    background-color: white !important;
+table {
+  width: 100%;
+  height: 200px;
+  padding: 35px;
+  text-align: left;
+  border-collapse: collapse;
 }
 
-
-th{
-    border-bottom: 2px solid black;
-    font-weight: bolder;
-    padding: 3px;
-}
-td{
-    line-height: 35px;
-    padding: 10px;
-}
-tr:nth-child(even){
-    background: #ffffff !important;
-}
-tr:nth-child(odd){
-    background: #b9b9b944 !important;
+thead tr th {
+  background-color: white !important;
 }
 
+th {
+  border-bottom: 2px solid black;
+  font-weight: bolder;
+  padding: 3px;
+}
+td {
+  line-height: 35px;
+  padding: 10px;
+}
+tr:nth-child(even) {
+  background: #ffffff !important;
+}
+tr:nth-child(odd) {
+  background: #b9b9b944 !important;
+}
 
 @media screen and (max-width: 1000px) {
-    .content-grid{
-        grid-template-columns: 1fr !important;
-        margin:auto;
-        grid-template-areas: 
-        'szemelyek' 
-        'kocsik' !important;
-        grid-template-rows: 1fr 1fr;
-    }
-    .kocsik{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .content-grid {
+    grid-template-columns: 1fr !important;
+    margin: auto;
+    grid-template-areas:
+      "szemelyek"
+      "kocsik" !important;
+    grid-template-rows: 1fr 1fr;
+  }
+  .kocsik {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .szemelyek{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-    }
-    
+  .szemelyek {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .content-grid{
-        grid-template-columns: 1fr !important;
-        margin:auto;
-        grid-template-areas: 
-        'szemelyek' 
-        'kocsik' !important;
-        grid-template-rows: auto auto;
+  .content-grid {
+    grid-template-columns: 1fr !important;
+    margin: auto;
+    grid-template-areas:
+      "szemelyek"
+      "kocsik" !important;
+    grid-template-rows: auto auto;
+  }
 
-    }
-
-    .szemelyek{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-    
+  .szemelyek {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
